@@ -17,7 +17,7 @@ public class DivisibleSumPairs {
             }
             int newKey = (ar[i] % k == 0) ? 0 : k - ar[i] % k;
             divisorCountMap.putIfAbsent(newKey, 0);
-            divisorCountMap.compute(newKey, (ke, value) -> value + 1);
+            divisorCountMap.compute(newKey, (key, value) -> value + 1);
         }
         return result;
     }
